@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Questions from './Questions';
-
+/** Redux store import */
+import {useSelector} from 'react-redux';
 export default function Quiz() {
+
+ const state = useSelector(state => state);
+ useEffect(()=>{
+    console.log(state,"qn");
+ })
   /** Previous button Handler */
   const onPrev = (()=>{
     console.log(`onPrev`);

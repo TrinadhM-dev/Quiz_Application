@@ -1,6 +1,11 @@
 import React,{useState} from 'react'
 import data from '../database/data.js';
+
+/** Custom Hook */
+import { useFetchQuestion } from '../hooks/FetchQuestions.jsx';
+
 const Questions = () => {
+// eslint-disable-next-line no-unused-vars
 const [checked,setChecked]=useState(undefined);
 const question = data[0]
 function onSelect (){
